@@ -27,15 +27,11 @@
         <github.global.server>github</github.global.server>
 
         <maven.version>3.0.3</maven.version>
-        <java.version>1.7</java.version>
+        <java.version>18</java.version>
         <junit.version>4.13.1</junit.version>
         <maven-compiler.version>2.5.1</maven-compiler.version>
         <maven-source.version>2.2.1</maven-source.version>
         <maven-javadoc.version>2.9</maven-javadoc.version>
-        <maven-eclipse.version>2.9</maven-eclipse.version>
-        <maven-release.version>2.3.2</maven-release.version>
-        <maven-gpg.version>1.4</maven-gpg.version>
-        <github-site-upload.version>0.6</github-site-upload.version>
 
         <jsoup.version>1.15.3</jsoup.version>
         <commons-io.version>2.4</commons-io.version>
@@ -140,37 +136,4 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
-    <profiles>
-        <profile>
-            <id>release-sign-artifacts</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${maven-gpg.version}</version>
-                        <configuration>
-                            <passphrase>${gpg.passphrase}</passphrase>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
