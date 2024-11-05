@@ -1,4 +1,4 @@
-package com.wuman.jreadability;
+package jreadability;
 
 import java.io.File;
 import java.io.IOException;

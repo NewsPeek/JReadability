@@ -26,7 +26,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <github.global.server>github</github.global.server>
 
-        <maven.version>3.0.3</maven.version>
         <java.version>18</java.version>
         <junit.version>4.13.1</junit.version>
         <maven-compiler.version>2.5.1</maven-compiler.version>
@@ -119,10 +118,6 @@
         <developerConnection>scm:git:git@github.com:wuman/JReadability.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-
-    <prerequisites>
-        <maven>${maven.version}</maven>
-    </prerequisites>
 
     <distributionManagement>
         <snapshotRepository>
